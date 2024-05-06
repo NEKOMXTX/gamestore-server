@@ -10,9 +10,6 @@ const errorHandler = require('./middleware/ErrorHandlingMiddleware')
 const path = require('path')
 
 const app = express()
-app.get('/', (req, res) => {
-    res.send('Hello from Express!');
-});
 app.use(cors())
 app.use(express.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
